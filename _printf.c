@@ -1,6 +1,13 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * _printf - an implementation of printf
+ * @format: string
+ * ...: further values for the format specifiers as
+ * variadic options
+ * Return: length
+ */
 int _printf(const char *format, ...)
 {
 	va_list args;
