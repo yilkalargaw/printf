@@ -1,7 +1,13 @@
 #include <stdarg.h>
 #include "main.h"
 
-
+/**
+ * print_HEX - Prints an octal to stdout
+ *
+ * @val: The HEX to print
+ *
+ * Return: void
+ */
 int get_HEX_length(unsigned int val)
 {
 	int length = 0;
@@ -13,6 +19,13 @@ int get_HEX_length(unsigned int val)
 	return (length);
 }
 
+/**
+ * get_HEX_length - Gets the length of an HEX
+ *
+ * @val: The HEX to get the length of
+ *
+ * Return: The length of the HEX
+ */
 void print_HEX(unsigned int val)
 {
 	char *hex = "0123456789ABCDEF";

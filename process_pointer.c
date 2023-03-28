@@ -1,6 +1,13 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * print_HEX - Prints an pointer to stdout
+ *
+ * @ptr_val: The pointer to print
+ *
+ * Return: void
+ */
 void print_ptr(void *ptr_val)
 {
 	unsigned long val = (unsigned long)ptr_val;
@@ -32,6 +39,13 @@ void print_ptr(void *ptr_val)
 		_putchar(hex[j]);
 }
 
+/**
+ * get_HEX_length - Gets the length of an pointer
+ *
+ * @ptr_val: The HEX to get the length of
+ *
+ * Return: The length of the octal
+ */
 int get_ptr_length(void *ptr_val)
 {
 	#ifdef _WIN64
