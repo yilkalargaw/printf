@@ -14,6 +14,9 @@ int _printf(const char *format, ...)
 	int length = 0;
 	const char *p = format;
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(args, format);
 
 	for (; *p != '\0'; p++)
