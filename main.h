@@ -63,32 +63,6 @@ typedef unsigned long my_uintptr_t;
 typedef unsigned int my_uintptr_t;
 #endif
 
-
-/* #if defined(__LP64__) || defined(_LP64__) || defined(__x86_64__) || \ */
-/* defined(__ia64__) || defined(_M_X64) || defined(_M_IA64) */
-/* typedef custom_unsigned_long_long my_uintptr_t; */
-/* #else */
-/* typedef unsigned int my_uintptr_t; */
-/* #endif */
-
-/* #ifndef CHAR_BIT */
-/* 	#if defined(__LP64__) || defined(_LP64__) || defined(__x86_64__) || \ */
-/* 		defined(__ia64__) || defined(_M_X64) || defined(_M_IA64) */
-/* 		#define CHAR_BIT (8 * sizeof(long long)) */
-/* 	#else */
-/* 		#define CHAR_BIT (8 * sizeof(int)) */
-/* 	#endif */
-/* #endif */
-
-/* #ifndef CHAR_BIT */
-/* 	#if defined(__LP64__) || defined(_LP64__) || defined(__x86_64__) || \ */
-/* 		defined(__ia64__) || defined(_M_X64) || defined(_M_IA64) */
-/* 		#define CHAR_BIT (8 * sizeof(int64_t)) */
-/* 	#else */
-/* 		#define CHAR_BIT (8 * sizeof(int)) */
-/* 	#endif */
-/* #endif */
-
 #ifndef CHAR_BIT
     #if defined(__LP64__) || defined(_LP64__) || defined(__x86_64__) || \
         defined(__ia64__) || defined(_M_X64) || defined(_M_IA64)
