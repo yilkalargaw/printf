@@ -1,6 +1,13 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * print_octa - Prints an octal to stdout
+ *
+ * @val: The octal to print
+ *
+ * Return: void
+ */
 void print_octal(unsigned int val)
 {
 	char buffer[20];
@@ -15,6 +22,13 @@ void print_octal(unsigned int val)
 		_putchar(buffer[j]);
 }
 
+/**
+ * get_octal_length - Gets the length of an octal
+ *
+ * @val: The octal to get the length of
+ *
+ * Return: The length of the octal
+ */
 int get_octal_length(unsigned int val)
 {
 	int len = 0;
