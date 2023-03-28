@@ -109,6 +109,14 @@ typedef unsigned int my_uintptr_t;
 		length += _strlen(val); \
 	}
 
+#define PRINT_REV() \
+	{ \
+		char* val = va_arg(args, char*); \
+		if (val == NULL) val = "(null)"; \
+		print_rev(val); \
+		length += _strlen(val); \
+	}
+
 #define GENERATE_SWITCH() \
 	do { \
 		switch (*(++p)) \
@@ -144,6 +152,9 @@ typedef unsigned int my_uintptr_t;
 			break; \
 		case '%': \
 			PRINT_PERCENT(); \
+			break; \
+		case 'r': \
+			PRINT_REV(); \
 			break; \
 		default: \
 			_printf("%%%c", *p);\
