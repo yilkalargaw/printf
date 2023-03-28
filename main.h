@@ -30,10 +30,6 @@ struct custom_unsigned_long_long
 
 typedef struct custom_unsigned_long_long custom_unsigned_long_long;
 
-/* #define long long longlong */
-/* #define unsigned_long_long unsigned long long */
-
-
 int _putchar(char c);
 void print_integer(int val);
 void print_string(char *val);
