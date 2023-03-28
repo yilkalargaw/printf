@@ -39,6 +39,7 @@ void print_octal(unsigned int val);
 void print_hex(unsigned int val);
 void print_HEX(unsigned int val);
 void print_ptr(void *ptr_val);
+void print_rev(char *s);
 
 int get_integer_length(int val);
 int get_unsigned_long_length(unsigned long val);
