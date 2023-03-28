@@ -28,9 +28,7 @@ int get_unsigned_long_length(unsigned long val)
 	int len = 0;
 
 	if (val == 0)
-	{
 		return (1);
-	}
 
 	while (val != 0)
 	{
