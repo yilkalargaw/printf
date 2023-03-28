@@ -1,27 +1,19 @@
+#include <stdarg.h>
 #include "main.h"
-#include <string.h>
 
 /**
- * sum_them_all - adds all the numbers
- * @n: the number of parameters passed
- * Return: Always 0
+ *_strlen - return length of a string
+ *@s: pointer to string
+ *
+ *Return: length
  */
-
-int sum_them_all(const unsigned int n, ...)
+int _strlen(char *s)
 {
-	int sum;
-	unsigned int i;
-	va_list ap;
+	int len;
 
-	va_start(ap, n);
+	len = 0;
+	while (s[len] != 0)
+		len++;
 
-	if (n == 0)
-		return (0);
-
-	for (i = 0; i < n; i++)
-		sum += va_arg(ap, int);
-
-	va_end(ap);
-
-	return (sum);
+	return (len);
 }
