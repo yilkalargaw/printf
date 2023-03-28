@@ -30,6 +30,8 @@ int get_hex_length(unsigned int val)
 
 	if (val / 16)
 		length += get_hex_length(val / 16);
+
 	length++;
+
 	return (length);
 }
