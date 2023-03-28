@@ -100,6 +100,14 @@ typedef unsigned int my_uintptr_t;
 		length++; \
 	}
 
+#define PRINT_STRING() \
+	{ \
+		char* val = va_arg(args, char*); \
+		if (val == NULL) val = "(null)"; \
+		print_string(val); \
+		length += _strlen(val); \
+	}
+
 #define GENERATE_SWITCH() \
 	do { \
 		switch (*(++p)) \
@@ -109,7 +117,7 @@ typedef unsigned int my_uintptr_t;
 			FULL_PRT(int, print_integer, get_integer_length); \
 			break; \
 		case 's': \
-			FULL_PRT(char*, print_string, _strlen); \
+			PRINT_STRING(); \
 			break; \
 		case 'u': \
 		case 'l': \
