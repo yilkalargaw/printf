@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_HEX - Prints an pointer to stdout
+ * print_ptr - Prints an pointer to stdout
  *
  * @ptr_val: The pointer to print
  *
@@ -40,7 +40,7 @@ void print_ptr(void *ptr_val)
 }
 
 /**
- * get_HEX_length - Gets the length of an pointer
+ * get_ptr_length - Gets the length of an pointer
  *
  * @ptr_val: The HEX to get the length of
  *
