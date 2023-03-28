@@ -15,13 +15,13 @@ void print_double(double val)
 
 	int_part = (int)val;
 	print_integer(int_part);
-	_putchar('.');
+	custom_putchar('.');
 
 	i = 0;
 	for (; i < 6; i++)
 	{
 		frac_part *= 10;
-		_putchar((int)frac_part + '0');
+		custom_putchar((int)frac_part + '0');
 		frac_part -= (int)frac_part;
 	}
 }

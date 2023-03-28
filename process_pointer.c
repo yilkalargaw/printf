@@ -32,11 +32,11 @@ void print_ptr(void *ptr_val)
 		val /= 16;
 	}
 
-	_putchar('0');
-	_putchar('x');
+	custom_putchar('0');
+	custom_putchar('x');
 
 	for (j = i - 1; j >= 0; j--)
-		_putchar(hex[j]);
+		custom_putchar(hex[j]);
 }
 
 /**

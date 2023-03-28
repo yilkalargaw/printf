@@ -11,11 +11,11 @@
 void print_integer(int val)
 {
 	if (val < 0)
-		_putchar('-'), val = -val;
+		custom_putchar('-'), val = -val;
 	if (val > 9)
 		print_integer(val / 10);
 
-	_putchar(val % 10 + '0');
+	custom_putchar(val % 10 + '0');
 }
 
 /**

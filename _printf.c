@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			GENERATE_SWITCH();
 		else
 		{
-			_putchar(*p);
+			custom_putchar(*p);
 			length++;
 		}
 	}

@@ -30,7 +30,7 @@ struct custom_unsigned_long_long
 
 typedef struct custom_unsigned_long_long custom_unsigned_long_long;
 
-int _putchar(char c);
+int custom_putchar(char c);
 void print_integer(int val);
 void print_string(char *val);
 void print_unsigned_long(unsigned long val);
@@ -51,7 +51,7 @@ int _printf(const char *format, ...);
 int _strlen(char *s);
 
 
-/* extern int _putchar_count; */
+/* extern int custom_putchar_count; */
 
 #if defined(__x86_64__) || defined(_M_X64)
 typedef unsigned long my_uintptr_t;
@@ -83,7 +83,7 @@ typedef unsigned int my_uintptr_t;
 #define PRINT_CHAR() \
 	{ \
 		char val = va_arg(args, int); \
-		_putchar(val); \
+		custom_putchar(val); \
 		length++; \
 	}
 
@@ -96,7 +96,7 @@ typedef unsigned int my_uintptr_t;
 
 #define PRINT_PERCENT() \
 	{ \
-		_putchar('%'); \
+		custom_putchar('%'); \
 		length++; \
 	}
 

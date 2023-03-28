@@ -14,7 +14,7 @@ void print_HEX(unsigned int val)
 
 	if (val / 16)
 		print_HEX(val / 16);
-	_putchar(hex[val % 16]);
+	custom_putchar(hex[val % 16]);
 }
 
 /**

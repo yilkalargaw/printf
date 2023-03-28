@@ -12,7 +12,7 @@ void print_unsigned_long(unsigned long val)
 {
 	if (val > 9)
 		print_unsigned_long(val / 10);
-	_putchar(val % 10 + '0');
+	custom_putchar(val % 10 + '0');
 }
 
 /**

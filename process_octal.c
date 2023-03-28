@@ -19,7 +19,7 @@ void print_octal(unsigned int val)
 		val /= 8;
 	}
 	for (j = i - 1; j >= 0; j--)
-		_putchar(buffer[j]);
+		custom_putchar(buffer[j]);
 }
 
 /**
