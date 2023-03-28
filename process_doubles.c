@@ -41,9 +41,7 @@ int get_double_length(double val)
 	double decimal_part = val - integer_part;
 
 	if (val < 0)
-	{
 		val = -val;
-	}
 
 	if (decimal_part > 0)
 	{
