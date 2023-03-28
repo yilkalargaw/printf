@@ -121,7 +121,7 @@ typedef unsigned int my_uintptr_t;
 		case 'c': \
 			PRINT_CHAR(); \
 			break; \
-			case 'o': \
+		case 'o': \
 			FULL_PRT(unsigned int, print_octal, get_octal_length); \
 			break; \
 		case 'X': \
