@@ -7,7 +7,8 @@
  * @val: The double to print
  *
  * Return: void
- */void print_double(double val)
+ */
+void print_double(double val)
 {
 	int int_part = 0, i;
 	double frac_part = val - int_part;

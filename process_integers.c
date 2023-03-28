@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include "main.h"
 
-/** 
+/**
  * print_integer - Prints an integer to stdout
  *
  * @val: The integer to print
@@ -18,8 +18,8 @@ void print_integer(int val)
 	_putchar(val % 10 + '0');
 }
 
-/** 
- * get_interger_length - Gets the length of an integer
+/**
+ * get_integer_length - Gets the length of an integer
  *
  * @val: The integer to get the length of
  *
