@@ -1,7 +1,8 @@
 #include <stdarg.h>
 #include "main.h"
 
-/* Prints a double to stdout
+/**
+ * print_double - Prints a double to stdout
  *
  * @val: The double to print
  *
@@ -24,7 +25,8 @@
 	}
 }
 
-/* Gets the length of a double
+/**
+ * get_double_length - Gets the length of a double
  *
  * @val: The double to get the length of
  *
