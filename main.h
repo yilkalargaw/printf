@@ -133,7 +133,7 @@ typedef unsigned int my_uintptr_t;
 		case 'p': \
 			PRINT_PTR(); \
 			break; \
-			case '%': \
+		case '%': \
 			PRINT_PERCENT(); \
 			break; \
 		default: \
