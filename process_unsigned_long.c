@@ -16,7 +16,7 @@ void print_unsigned_long(unsigned long val)
 }
 
 /**
- * get_unsigned _long_length - Gets the length of an
+ * get_unsigned_long_length - Gets the length of an
  *  unsigned long
  *
  * @val: The unsigned long to get the length of
