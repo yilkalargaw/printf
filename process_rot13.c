@@ -1,10 +1,10 @@
 #include <stdarg.h>
 #include "main.h"
 /**
- * rot13 - encode string in rot13
+ * print_rot13 - encode string in rot13
  * @str: input string pointer
  *
- * Return: char
+ * Return: void
  */
 void print_rot13(char *s)
 {
