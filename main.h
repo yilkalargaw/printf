@@ -51,6 +51,7 @@ int get_ptr_length(void *ptr_val);
 int _printf(const char *format, ...);
 int _strlen(char *s);
 
+char *rot13(char *str);
 
 /* extern int custom_putchar_count; */
 
