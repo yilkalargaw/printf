@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * print_rot13 - encode string in rot13
- * @str: input string pointer
+ * @s: input string pointer
  *
  * Return: void
  */
