@@ -40,6 +40,7 @@ void print_hex(unsigned int val);
 void print_HEX(unsigned int val);
 void print_ptr(void *ptr_val);
 void print_rev(char *s);
+void print_rot13(char *s);
 
 int get_integer_length(int val);
 int get_unsigned_long_length(unsigned long val);
@@ -50,8 +51,6 @@ int get_hex_length(unsigned int val);
 int get_ptr_length(void *ptr_val);
 int _printf(const char *format, ...);
 int _strlen(char *s);
-
-char *rot13(char *str);
 
 /* extern int custom_putchar_count; */
 
@@ -118,6 +117,14 @@ typedef unsigned int my_uintptr_t;
 		length += _strlen(val); \
 	}
 
+#define PRINT_ROT13() \
+	{ \
+		char* val = va_arg(args, char*); \
+		if (val == NULL) val = "(null)"; \
+		print_rot13(val); \
+		length += _strlen(val); \
+	}
+
 #define GENERATE_SWITCH() \
 	do { \
 		switch (*(++p)) \
@@ -156,6 +163,9 @@ typedef unsigned int my_uintptr_t;
 			break; \
 		case 'r': \
 			PRINT_REV(); \
+			break; \
+		case 'R': \
+			PRINT_ROT13(); \
 			break; \
 		default: \
 			_printf("%%%c", *p);\

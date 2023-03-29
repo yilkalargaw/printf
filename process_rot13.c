@@ -6,24 +6,22 @@
  *
  * Return: char
  */
-char *rot13(char *str)
+void print_rot13(char *s)
 {
-	char *p = str;
 	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i = 0, j = 0;
 
 
-	for (; p[j] != '\0'; j++)
+	for (; s[j] != '\0'; j++)
 	{
 		for (i = 0; i <= 52; i++)
 		{
-			if (p[j] == alphabet[i])
+			if (s[j] == alphabet[i])
 			{
-				p[j] = rot13[i];
+				custom_putchar(rot13[i]);
 				break;
 			}
 		}
 	}
-	return (p);
 }
