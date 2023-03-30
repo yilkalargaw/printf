@@ -38,21 +38,14 @@ void print_ptr(void *ptr_val)
 	for (j = i - 1; j >= 0; j--)
 		custom_putchar(hex[j]);
 }
-
 /**
  * get_ptr_length - Gets the length of an pointer
  *
  * @ptr_val: The HEX to get the length of
  *
  * Return: The length of the octal
- */
+*/
 int get_ptr_length(void *ptr_val)
 {
-	#ifdef _WIN64
-		/* Divide by four to convert bits to hexadecimal digits */
-		return (sizeof(ptr_val) * CHAR_BIT / 4);
-	#else
-		/* Subtract size of pointer to account for sign extension */
-		return (sizeof(ptr_val) * CHAR_BIT / 4 - sizeof(ptr_val));
-	#endif
+	return(14);
 }

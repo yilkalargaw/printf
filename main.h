@@ -40,6 +40,7 @@ void print_hex(unsigned int val);
 void print_HEX(unsigned int val);
 void print_ptr(void *ptr_val);
 void print_rev(char *s);
+void print_rot13(char *s);
 
 int get_integer_length(int val);
 int get_unsigned_long_length(unsigned long val);
@@ -51,7 +52,6 @@ int get_ptr_length(void *ptr_val);
 int _printf(const char *format, ...);
 int _strlen(char *s);
 
-
 /* extern int custom_putchar_count; */
 
 #if defined(__x86_64__) || defined(_M_X64)
@@ -61,12 +61,12 @@ typedef unsigned int my_uintptr_t;
 #endif
 
 #ifndef CHAR_BIT
-    #if defined(__LP64__) || defined(_LP64__) || defined(__x86_64__) || \
-        defined(__ia64__) || defined(_M_X64) || defined(_M_IA64)
-        #define CHAR_BIT (8 * sizeof(long))
-    #else
-        #define CHAR_BIT (8 * sizeof(int))
-    #endif
+	#if defined(__LP64__) || defined(_LP64__) || defined(__x86_64__) || \
+		defined(__ia64__) || defined(_M_X64) || defined(_M_IA64)
+		#define CHAR_BIT (8 * sizeof(long))
+	#else
+		#define CHAR_BIT (8 * sizeof(int))
+	#endif
 #endif
 
 #define MAX(a, b) {	  \
@@ -103,17 +103,28 @@ typedef unsigned int my_uintptr_t;
 
 #define PRINT_STRING() \
 	{ \
-		char* val = va_arg(args, char*); \
-		if (val == NULL) val = "(null)"; \
+		char *val = va_arg(args, char*); \
+		if (val == NULL) \
+			val = "(null)"; \
 		print_string(val); \
 		length += _strlen(val); \
 	}
 
 #define PRINT_REV() \
 	{ \
-		char* val = va_arg(args, char*); \
-		if (val == NULL) val = "(null)"; \
+		char *val = va_arg(args, char*); \
+		if (val == NULL) \
+			val = "(null)"; \
 		print_rev(val); \
+		length += _strlen(val); \
+	}
+
+#define PRINT_ROT13() \
+	{ \
+		char *val = va_arg(args, char*); \
+		if (val == NULL) \
+			val = "(null)"; \
+		print_rot13(val); \
 		length += _strlen(val); \
 	}
 
@@ -155,6 +166,9 @@ typedef unsigned int my_uintptr_t;
 			break; \
 		case 'r': \
 			PRINT_REV(); \
+			break; \
+		case 'R': \
+			PRINT_ROT13(); \
 			break; \
 		default: \
 			_printf("%%%c", *p);\
