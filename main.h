@@ -92,7 +92,7 @@ typedef unsigned int my_uintptr_t;
 	{ \
 		void *ptr_val = va_arg(args, void*); \
 		print_ptr(ptr_val); \
-		length += get_ptr_length(ptr_val); \
+		length += 14;\
 	}
 
 #define PRINT_PERCENT() \
