@@ -176,7 +176,10 @@ typedef unsigned int my_uintptr_t;
 			PRINT_ROT13(); \
 			break; \
 		default: \
-			_printf("%%%c", *p);\
+			custom_putchar('%'); \
+			custom_putchar(*format); \
+			length += 2; \
+			break; \
 	} \
 	} while (0)
 
