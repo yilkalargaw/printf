@@ -40,20 +40,20 @@ void print_nonish_string(char *val)
  */
 int get_nonish_string_length(char *string)
 {
-        int length = 0;
+		int length = 0;
 
-        if (string == NULL)
-        {
-                length = _strlen("(null)");
-        }
+		if (string == NULL)
+		{
+				length = _strlen("(null)");
+		}
 
-        while (*string != '\0')
-        {
-                if (*string < 32 || *string >= 127)
-                        length += 4;
-                else
-                        length++;
-                string++;
-        }
-        return (length);
+		while (*string != '\0')
+		{
+				if (*string < 32 || *string >= 127)
+						length += 4;
+				else
+						length++;
+				string++;
+		}
+		return (length);
 }
