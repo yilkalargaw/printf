@@ -164,6 +164,9 @@ typedef unsigned int my_uintptr_t;
 		case '%': \
 			PRINT_PERCENT(); \
 			break; \
+		case 'S': \
+			FULL_PRT(char*, print_nonish_string, get_nonish_string_length); \
+			break; \
 		case 'r': \
 			PRINT_REV(); \
 			break; \
