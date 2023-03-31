@@ -18,16 +18,16 @@ void print_nonish_string(char *val)
 
 	for (; *q != '\0'; q++)
 	{
-		if (q < 32 || q >= 127)
+		if (*q < 32 || *q >= 127)
 		{
 			custom_putchar('\\');
 			custom_putchar('x');
-			custom_putchar((q / 16) + '0');
-			custom_putchar((q % 16) + '0');
+			custom_putchar((*q / 16) + '0');
+			custom_putchar((*q % 16) + '0');
 		}
 		else
 		{
-			custom_putchar(q);
+			custom_putchar(*q);
 		}
 	}
 }
@@ -40,20 +40,20 @@ void print_nonish_string(char *val)
  */
 int get_nonish_string_length(char *string)
 {
-	int length = 0;
+        int length = 0;
 
-	if (val == NULL)
-	{
-		_strlen("(null)");
-	}
+        if (string == NULL)
+        {
+                length = _strlen("(null)");
+        }
 
-	while (*string != '\0')
-	{
-		if (*string < 32 || *string >= 127)
-			length += 4;
-		else
-			length++;
-		string++;
-	}
-	return (length);
+        while (*string != '\0')
+        {
+                if (*string < 32 || *string >= 127)
+                        length += 4;
+                else
+                        length++;
+                string++;
+        }
+        return (length);
 }

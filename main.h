@@ -41,6 +41,7 @@ void print_HEX(unsigned int val);
 void print_ptr(void *ptr_val);
 void print_rev(char *s);
 void print_rot13(char *s);
+void print_nonish_string(char *val);
 
 int get_integer_length(int val);
 int get_unsigned_long_length(unsigned long val);
@@ -51,6 +52,7 @@ int get_hex_length(unsigned int val);
 int get_ptr_length(void *ptr_val);
 int _printf(const char *format, ...);
 int _strlen(char *s);
+int get_nonish_string_length(char *string);
 
 /* extern int custom_putchar_count; */
 
