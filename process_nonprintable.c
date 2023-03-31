@@ -43,17 +43,16 @@ int get_nonish_string_length(char *string)
 		int length = 0;
 
 		if (string == NULL)
-		{
-				length = _strlen("(null)");
-		}
+			length = _strlen("(null)");
 
 		while (*string != '\0')
 		{
-				if (*string < 32 || *string >= 127)
-						length += 4;
-				else
-						length++;
-				string++;
+			if (*string < 32 || *string >= 127)
+				length += 4;
+			else
+					length++;
+			string++;
 		}
+
 		return (length);
 }
