@@ -3,6 +3,11 @@
 
 #define NULL ((void *)0)
 
+#include <stdint.h>
+
+typedef int64_t my_long_long;
+/* typedef long long my_long_long; */
+
 /**
  * struct custom_long_long - A structure to represent a 64-bit integer
  * @low: The low 32 bits of the integer
@@ -31,7 +36,7 @@ struct custom_unsigned_long_long
 typedef struct custom_unsigned_long_long custom_unsigned_long_long;
 
 int custom_putchar(char c);
-void print_integer(int val);
+void print_integer(my_long_long val);
 void print_string(char *val);
 void print_unsigned_long(unsigned long val);
 void print_double(double val);
@@ -136,7 +141,7 @@ typedef unsigned int my_uintptr_t;
 		{ \
 		case 'd': \
 		case 'i': \
-			FULL_PRT(int, print_integer, get_integer_length); \
+			FULL_PRT(my_long_long, print_integer, get_integer_length);	\
 			break; \
 		case 's': \
 			PRINT_STRING(); \
