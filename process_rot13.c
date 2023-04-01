@@ -22,7 +22,8 @@ void print_rot13(char *s)
 				custom_putchar(rot13[i]);
 				break;
 			}
-			custom_putchar(s[j]);
+			else
+				custom_putchar(s[j]);
 		}
 	}
 }
