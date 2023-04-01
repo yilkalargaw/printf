@@ -32,12 +32,12 @@ void print_integer(my_long_long n)
 
 	if (n < 0)
 	{
-		putchar('-');
+		custom_putchar('-');
 		n = -n;
 	}
 	if (n == 0)
 	{
-		putchar('0');
+		custom_putchar('0');
 		return;
 	}
 	while (n > 0)
@@ -47,7 +47,7 @@ void print_integer(my_long_long n)
 	}
 	while (i > 0)
 	{
-		putchar(str[--i]);
+		custom_putchar(str[--i]);
 	}
 }
 
