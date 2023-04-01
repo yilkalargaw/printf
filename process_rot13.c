@@ -8,22 +8,20 @@
  */
 void print_rot13(char *s)
 {
-	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz \n\t.,:;!";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm \n\t.,:;!";
 	int i = 0, j = 0;
 
 
 	for (; s[j] != '\0'; j++)
 	{
-		for (i = 0; i <= 52; i++)
+		for (i = 0; i <= 68; i++)
 		{
 			if (s[j] == alphabet[i])
 			{
 				custom_putchar(rot13[i]);
 				break;
 			}
-			else
-				custom_putchar(s[j]);
 		}
 	}
 }
