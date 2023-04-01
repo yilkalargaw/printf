@@ -36,7 +36,7 @@ struct custom_unsigned_long_long
 typedef struct custom_unsigned_long_long custom_unsigned_long_long;
 
 int custom_putchar(char c);
-void print_integer(my_long_long val);
+void print_integer(int val);
 void print_string(char *val);
 void print_unsigned_long(unsigned long val);
 void print_double(double val);
