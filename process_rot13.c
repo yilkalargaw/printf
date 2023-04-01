@@ -8,14 +8,14 @@
  */
 void print_rot13(char *s)
 {
-	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz \n\t.,:;!";
-	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm \n\t.,:;!";
+	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz \n\t.,:;!_";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm \n\t.,:;!_";
 	int i = 0, j = 0;
 
 
 	for (; s[j] != '\0'; j++)
 	{
-		for (i = 0; i <= 68; i++)
+		for (i = 0; i <= 70; i++)
 		{
 			if (s[j] == alphabet[i])
 			{
