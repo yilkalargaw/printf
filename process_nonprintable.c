@@ -1,6 +1,9 @@
 #include <stdarg.h>
 #include "main.h"
 
+#include <stdarg.h>
+#include "main.h"
+
 /**
  * print_nonish_string - prints strings using custom_putchar
  * @val : string as character array
@@ -22,8 +25,8 @@ void print_nonish_string(char *val)
 		{
 			custom_putchar('\\');
 			custom_putchar('x');
-			custom_putchar((*q / 16) + '0');
-			custom_putchar((*q % 16) + '0');
+			custom_putchar("0123456789ABCDEF"[*q / 16]);
+			custom_putchar("0123456789ABCDEF"[*q % 16]);
 		}
 		else
 		{
