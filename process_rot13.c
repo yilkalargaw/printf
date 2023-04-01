@@ -8,8 +8,8 @@
  */
 void print_rot13(char *s)
 {
-	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
-	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ";
+	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i = 0, j = 0;
 
 
@@ -22,6 +22,7 @@ void print_rot13(char *s)
 				custom_putchar(rot13[i]);
 				break;
 			}
+			custom_putchar(s[j]);
 		}
 	}
 }
