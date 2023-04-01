@@ -163,9 +163,6 @@ typedef unsigned int my_uintptr_t;
 		case 'p': \
 			PRINT_PTR(); \
 			break; \
-		case '%': \
-			PRINT_PERCENT(); \
-			break; \
 		case 'S': \
 			FULL_PRT(char*, print_nonish_string, get_nonish_string_length); \
 			break; \
@@ -175,9 +172,13 @@ typedef unsigned int my_uintptr_t;
 		case 'R': \
 			PRINT_ROT13(); \
 			break; \
+		case '%': \
+			custom_putchar('%'); \
+			length++; \
+			break; \
 		default: \
 			custom_putchar('%'); \
-			custom_putchar(*format); \
+			custom_putchar(*p); \
 			length += 2; \
 			break; \
 	} \
